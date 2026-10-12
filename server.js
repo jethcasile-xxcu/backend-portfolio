@@ -6,8 +6,15 @@ const OpenAI = require('openai');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({origin: 'https://github.com/jethcasile-xxcu.github.io'}));
 app.use(express.json({ limit: '64kb' }));
+
+const rateLimit = require('express-rate-limit');
+app.use('/api/chat', rateLimit({
+  windowMs: 15 *60 * 1000, // 15 minutes ito putangina
+  limit: 50,
+  message: { error: 'Daghana nimog pangutana uyy'}
+}));
 
 // Initialize OpenAI client pointed to NVIDIA's API endpoint
 const openai = new OpenAI({

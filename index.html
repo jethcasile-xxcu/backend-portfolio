@@ -256,18 +256,16 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
               document.getElementById(loadingId).remove();
 
               if (response.ok) {
-                  // 4. ADDED: Push AI response to history so it remembers it next time
-                  chatHistory.push({ role: 'assistant', text: data.reply });
-                  appendMessage(data.reply, 'ai');
+               chatHistory.push({ role: 'assistant', text: data.reply });
+               appendMessage(data.reply, 'ai');
               } else {
                   appendMessage('Error: ' + (data.error || 'Failed to get response'), 'ai');
-              }
+          }
           } catch (error) {
               document.getElementById(loadingId).remove();
               appendMessage('Error: Could not connect to backend server.', 'ai');
           }
       });
-
       function appendMessage(text, sender, isLoading = false) {
           const messageId = 'msg-' + Date.now();
           const isUser = sender === 'user';
