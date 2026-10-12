@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeth Aaron Casile | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- mga scripts nga section ni bai!!! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>My Portfolio</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        
+        <!-- Left Column: Name, Bio & Action Buttons -->
+        <div class="hero-text">
+          <div class="hero-greeting">Hi, I'm</div>
+          <h1 class="hero-title">Jeth Casile</h1>
+          <p class="hero-description">
+            Currently pursuing Information Technology at Cordova Public College, I build user-focused web interfaces and solve real-world technical problems. Welcome to my portfolio!
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary-btn">View Work</a>
+            <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+            
+            <!-- Distinct Oval Theme Toggle Button paras theme-->
+            <button id="theme-toggle" class="btn theme-btn-oval" aria-label="Toggle Theme" type="button">
+              <i data-lucide="sun" id="theme-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile photo nako -->
+        <div class="hero-image-wrapper">
+          <div class="pfp-container" id="pfpContainer">
+            <img src="images/mypfpdark.jpg" alt="Jeth Casile" class="pfp-img real-img" id="realImg">
+           <video class="pfp-video dark-asset" src="images/dark1.mp4" muted loop playsinline preload="metadata"></video>
+           <video class="pfp-video light-asset" src="images/layt2.mp4" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am an Information Technology student at Cordova Public College with a strong passion for web development and technical problem-solving. My focus lies in building clean, responsive web layouts using HTML and CSS, alongside diagnosing and repairing computer hardware systems.
+
+Driven by curiosity and practical logic, I enjoy turning technical concepts into functional digital solutions, whether that means writing structured code or troubleshooting complex computer hardware.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <!-- PROJECT 1  nako-->
+      <div class="project-card">
+        <h3>Computer Repair Service Request Portal</h3>
+        
+        <a href="#img-repair">
+          <img src="images/repair-portal-proof.png" alt="Repair Portal Preview" class="project-thumb">
+        </a>
+
+        <p>Built as part of my Information Technology coursework at Cordova Public College, this project provides a structured digital front desk for hardware repair services.</p>
+
+        <div class="project-links">
+          <a href="https://jethcasile-xxcu.github.io/repair-service-portal/" target="_blank" class="btn primary-btn">Live Demo</a>
+          <a href="https://github.com/jethcasile-xxcu/repair-service-portal" target="_blank" class="btn secondary-btn">View Code</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 ni -->
+      <div class="project-card">
+        <h3>My Website</h3>
+        
+        <a href="#img-portfolio">
+          <img src="images/website.png" alt="Portfolio Preview" class="project-thumb">
+        </a>
+
+        <p>A clean, responsive personal portfolio website created to showcase IT projects, technical skills, and academic coursework.</p>
+      </div>
+    </section>
+
+    <!-- Full-Screen Lightbox Overlays para aesthetic tignan -->
+    <div id="img-repair" class="lightbox">
+      <a href="#projects" class="lightbox-close">&times;</a>
+      <img src="images/repair-portal-proof.png" alt="Repair Portal Full Screen">
+    </div>
+
+    <div id="img-portfolio" class="lightbox">
+      <a href="#projects" class="lightbox-close">&times;</a>
+      <img src="images/website.png" alt="Website Full Screen">
+    </div>
+
+    <!-- Contact Section nako syempre -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <p>I am always open to discussing new projects, web development ideas, or IT opportunities.</p>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:jethxcali@gmail.com">jethxcali@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/jethcasile-xxcu" target="_blank">github.com/jethcasile-xxcu</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p>Cordova, Cebu, Philippines</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2026 Jeth Casile. Built with HTML, CSS & JS.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="https://github.com/jethcasile-xxcu" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:jethxcali@gmail.com">Email</a>
+        <a href="#home" class="top-link">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Creature Canvas Overlay ni diri nga part -->
+  <canvas id="creature-canvas"></canvas>
+  <script src="creature-cursor.js"></script>
+
+  <!-- Mouse Tracking Variable Script nga part-->
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.body.style.setProperty('--mouse-x', `${x}%`);
+      document.body.style.setProperty('--mouse-y', `${y}%`);
+    });
+  </script>
+
+  <!-- ==================== FLOATING AI CHAT WIDGET ==================== -->
+  <div id="ai-chat-widget">
+      <!-- Floating Trigger Button (Bottom Right) -->
+      <button id="chat-toggle-btn" aria-label="Open Chat Assistant" type="button">
+          <i data-lucide="message-square"></i>
+      </button>
+
+      <!-- Popup Chat Window -->
+      <div id="chat-window" class="hidden">
+          <div class="chat-header">
+              <div class="chat-title-wrapper">
+                  <span class="chat-status-dot"></span>
+                  <div>
+                      <h3>Migo ko ni Jeth</h3>
+                      <p>Ask me anything about Jeth!</p>
+                  </div>
+              </div>
+              <button id="chat-close-btn" type="button">&times;</button>
+          </div>
+
+          <div id="chat-container">
+              <div class="chat-msg ai-msg">
+                  <p>Unsay matabang nako nimo dawg?🥀🥀</p>
+              </div>
+          </div>
+
+          <div class="chat-footer">
+              <form id="chat-form">
+                  <input type="text" id="user-input" placeholder="Ask about Jeth..." autocomplete="off" required>
+                  <button type="submit" class="btn primary-btn" style="padding: 0.6rem 1rem;">Send</button>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chat Widget Script -->
+  <script>
+      const chatToggleBtn = document.getElementById('chat-toggle-btn');
+      const chatWindow = document.getElementById('chat-window');
+      const chatCloseBtn = document.getElementById('chat-close-btn');
+      const chatContainer = document.getElementById('chat-container');
+      const chatForm = document.getElementById('chat-form');
+      const userInput = document.getElementById('user-input');
+
+      // Toggle Chat Window
+      chatToggleBtn.addEventListener('click', () => {
+          chatWindow.classList.toggle('hidden');
+          if (!chatWindow.classList.contains('hidden')) {
+              userInput.focus();
+              chatContainer.scrollTop = chatContainer.scrollHeight;
+          }
+      });
+
+      // Close Chat Window
+      chatCloseBtn.addEventListener('click', () => {
+          chatWindow.classList.add('hidden');
+      });
+
+      // Handle Form Submit & Communicate with Node.js Backend
+      chatForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const message = userInput.value.trim();
+          if (!message) return;
+
+          // 1. Append User Message
+          appendMessage(message, 'user');
+          userInput.value = '';
+
+          // 2. Show Thinking State
+          const loadingId = appendMessage('Thinking...', 'ai', true);
+
+          try {
+              const response = await fetch('http://localhost:3000/api/chat', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ message: message })
+              });
+
+              const data = await response.json();
+              document.getElementById(loadingId).remove();
+
+              if (response.ok) {
+                  appendMessage(data.reply, 'ai');
+              } else {
+                  appendMessage('Error: ' + (data.error || 'Failed to get response'), 'ai');
+              }
+          } catch (error) {
+              document.getElementById(loadingId).remove();
+              appendMessage('Error: Could not connect to local backend. Make sure `node server.js` is running!', 'ai');
+          }
+      });
+
+      function appendMessage(text, sender, isLoading = false) {
+          const messageId = 'msg-' + Date.now();
+          const isUser = sender === 'user';
+
+          const messageDiv = document.createElement('div');
+          messageDiv.id = messageId;
+          messageDiv.className = `chat-msg ${isUser ? 'user-msg' : 'ai-msg'} ${isLoading ? 'animate-pulse' : ''}`;
+          messageDiv.innerHTML = `<p>${text}</p>`;
+
+          chatContainer.appendChild(messageDiv);
+          chatContainer.scrollTop = chatContainer.scrollHeight;
+          return messageId;
+      }
+  </script>
+
+</body>
+</html>
