@@ -11,8 +11,8 @@ app.use(express.json({ limit: '64kb' }));
 
 // Initialize OpenAI client pointed to NVIDIA's API endpoint
 const openai = new OpenAI({
-  apiKey: process.env.NVIDIA_API_KEY,
-  baseURL: 'https://integrate.api.nvidia.com/v1',
+  apiKey: process.env.OPENROUTER_API_KEY,
+  baseURL: 'https://openrouter.ai/api/v1',
 });
 
 app.post('/api/chat', async (req, res) => {
