@@ -77,5 +77,5 @@ Keep your tone professional, welcoming, tech-savvy, and secure.`;
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Clean & fast racing server running on http://localhost:${port}`);
+  console.log(`🚀 Clean & fast racing server running on https://backend-portfolio-66ww.onrender.com`);
 });
