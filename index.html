@@ -202,7 +202,7 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
       </div>
   </div>
 
-  <!-- Chat Widget Script -->
+<!-- Chat Widget Script -->
   <script>
       const chatToggleBtn = document.getElementById('chat-toggle-btn');
       const chatWindow = document.getElementById('chat-window');
@@ -210,6 +210,9 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
       const chatContainer = document.getElementById('chat-container');
       const chatForm = document.getElementById('chat-form');
       const userInput = document.getElementById('user-input');
+
+      // 1. ADDED: Array to track full conversation history
+      let chatHistory = [];
 
       // Toggle Chat Window
       chatToggleBtn.addEventListener('click', () => {
@@ -231,31 +234,37 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
           const message = userInput.value.trim();
           if (!message) return;
 
-          // 1. Append User Message
+          // 2. ADDED: Push user message to history before sending
+          chatHistory.push({ role: 'user', text: message });
+
+          // Append User Message to UI
           appendMessage(message, 'user');
           userInput.value = '';
 
-          // 2. Show Thinking State
+          // Show Thinking State
           const loadingId = appendMessage('Thinking...', 'ai', true);
 
           try {
+              // 3. REPLACED: Sending the full `chatHistory` array instead of just a single `{ message }`
               const response = await fetch('https://backend-portfolio-66ww.onrender.com/api/chat', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ message: message })
+                  body: JSON.stringify({ messages: chatHistory })
               });
 
               const data = await response.json();
               document.getElementById(loadingId).remove();
 
               if (response.ok) {
+                  // 4. ADDED: Push AI response to history so it remembers it next time
+                  chatHistory.push({ role: 'assistant', text: data.reply });
                   appendMessage(data.reply, 'ai');
               } else {
                   appendMessage('Error: ' + (data.error || 'Failed to get response'), 'ai');
               }
           } catch (error) {
               document.getElementById(loadingId).remove();
-              appendMessage('Error: Could not connect to local backend. Make sure `node server.js` is running!', 'ai');
+              appendMessage('Error: Could not connect to backend server.', 'ai');
           }
       });
 
