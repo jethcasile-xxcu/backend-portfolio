@@ -94,7 +94,7 @@ app.post('/api/chat', async (req, res) => {
 
     // Call NVIDIA API
     const completion = await openai.chat.completions.create({
-      model: 'meta/llama-3.1-8b-instruct', // You can change this to another NVIDIA model if preferred
+      model: 'meta-llama/llama-3.1-8b-instruct', 
       messages: formattedMessages,
       temperature: 0.5,
       max_tokens: 400,
@@ -115,5 +115,5 @@ app.post('/api/chat', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 NVIDIA-backed secure server running on port ${port}`);
+  console.log(`NVIDIA-backed secure server running on port ${port}`);
 });
