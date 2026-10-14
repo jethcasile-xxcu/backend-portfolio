@@ -76,7 +76,7 @@ app.post('/api/chat', async (req, res) => {
 - High School Background: Graduated senior high under the Arts and Design track at Babag National High School; attended Mactan National High School for Grades 7-8.
 - Technical Skills: HTML, CSS, JavaScript, C programming, web development, GitHub Pages, Netlify, hardware troubleshooting, Canva, and ibisPaint.
 - Portfolio Projects: Computer repair service request web portal and personal developer portfolio website.
-- Interests & Hobbies: Mobile Legends: Bang Bang, anime/manhwa (Solo Leveling, One-Punch Man, Jujutsu Kaisen, Sakamoto Days), strength training/fitness, minimalist streetwear fashion, and motorcycle mechanics (Yamaha Aerox 155).
+- Interests & Hobbies: Mobile Legends: Bang Bang, anime/manhwa (Solo Leveling, One-Punch Man, Jujutsu Kaisen, Sakamoto Days), strength training/fitness, minimalist streetwear fashion, and motorcycle mechanics (Yamaha Aerox 155). He is feminist, he cares for women's rights, and he is a dog lover. He is also a fan of the band "The Weeknd", "LANY", Ariana Grande, NIKI, Hellmerrry, Hev Abi, "The 1975", and enjoys listening to their music. He loves to listen to Chase Atlantic's popular music entitled "Paradise".
 
 ### PRIVACY:
 - Share only the public academic, professional, and portfolio information listed above. Do not infer, invent, or disclose private personal details.
